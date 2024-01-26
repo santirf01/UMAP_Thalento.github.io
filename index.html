@@ -83,9 +83,9 @@
         <td>
             <select id="categoriaSelector" onchange="showCategory(this.value)">
                 <option value="">Selecciona una categoría</option>
-                <option value="librivox">Librivox</option>
-                <option value="albayzin4">Albayzin 4 Speakers</option>
-                <option value="albayzin216">Albayzin 216 Speakers</option>
+                <option value="librivox">UMAP Diálogo y Lectura</option>
+                <option value="albayzin4">UMAP Lectura Orig vs Sint</option>
+                <option value="albayzin216">UMAP speakers Thalento</option>
                 <option value="thalento_lect_dial">Thalento Lectura y Diálogo</option>
                 <option value="thalento_lect">Thalento Lectura</option>
             </select>
@@ -188,40 +188,50 @@ function showCategory(category) {
         function createSelect(selectId) {
             if (selectId==="Imageselector_Lib"){
                 var selectHtml = '<select id="' + selectId + '" onchange="loadContent(this.value)">';
-                selectHtml += '<option value="">Selecciona una imagen de Librivox</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Librivox/Avg_tim_Librivox.html">Tiempo medio por Nº letras</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Librivox/Median_time_Librivox.html">Tiempo mediano por Nº letras</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Librivox/STD_time_Librivox.html">Desviación típica del tiempo por Nº letras</option>';
+                selectHtml += '<option value="">Selecciona un UMAP</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0001_OriginalvsSintetico.html">TVD-D-0001/option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0002_OriginalvsSintetico.html">TVD-D-0002</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0003_OriginalvsSintetico.html">TVD-D-0003</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0005_OriginalvsSintetico.html">TVD-D-0005</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0006_OriginalvsSintetico.html">TVD-D-0006</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0007_OriginalvsSintetico.html">TVD-D-0007</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0008_OriginalvsSintetico.html">TVD-D-0008</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0009_OriginalvsSintetico.html">TVD-D-0009</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0010_OriginalvsSintetico.html">TVD-D-0010/option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0011_OriginalvsSintetico.html">TVD-D-0011</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0012_OriginalvsSintetico.html">TVD-D-0012</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0013_OriginalvsSintetico.html">TVD-D-0013</option>';
                 selectHtml += '</select>';
                 return selectHtml;
             }else if (selectId==="Imageselector_Alb4"){
                 var selectHtml = '<select id="' + selectId + '" onchange="loadContent(this.value)">';
-                selectHtml += '<option value="">Selecciona una imagen de Albayzin 4 speakers</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin_4_Speakers/Avg_tim_Albayzin_4_speakers.html">Tiempo medio por Nº letras</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin_4_Speakers/Median_time_Albayzin_4_speakers.html">Tiempo mediano por Nº letras</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin_4_Speakers/STD_time_Albayzin_4_speakers.html">Desviación típica del tiempo por Nº letras</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin_4_Speakers/AudioSpeakAlb_4speaker.html">Tiempo de audio y Nº frases por persona</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/UMAP/UMAP_Albayzin4.html">UMAP</option>';
+                selectHtml += '<option value="">Selecciona un UMAP</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0001_OriginalvsSintetico_Lectura_orig_sint.html">TVD-D-0001/option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0002_OriginalvsSintetico_Lectura_orig_sint.html">TVD-D-0002</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0003_OriginalvsSintetico_Lectura_orig_sint.html">TVD-D-0003</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0005_OriginalvsSintetico_Lectura_orig_sint.html">TVD-D-0005</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0006_OriginalvsSintetico_Lectura_orig_sint.html">TVD-D-0006</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0007_OriginalvsSintetico_Lectura_orig_sint.html">TVD-D-0007</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0008_OriginalvsSintetico_Lectura_orig_sint.html">TVD-D-0008</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0009_OriginalvsSintetico_Lectura_orig_sint.html">TVD-D-0009</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0010_OriginalvsSintetico_Lectura_orig_sint.html">TVD-D-0010/option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0011_OriginalvsSintetico_Lectura_orig_sint.html">TVD-D-0011</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0012_OriginalvsSintetico_Lectura_orig_sint.html">TVD-D-0012</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Medidas_Audios_Sintetizados_Thalento/d_vector/UMAP_plots/UMAP_TVD-D-0013_OriginalvsSintetico_Lectura_orig_sint.html">TVD-D-0013</option>';
                 selectHtml += '</select>';
                 return selectHtml;
             }else if (selectId==="Imageselector_Alb216"){
                 var selectHtml = '<select id="' + selectId + '" onchange="loadContent(this.value)">';
-                selectHtml += '<option value="">Selecciona una imagen de Albayzin 216 speakers</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin/Avg_tim_Albayzin.html">Tiempo medio por Nº letras</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin/Median_time_Albayzin.html">Tiempo mediano por Nº letras</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin/STD_time_Albayzin.html">Desviación típica del tiempo por Nº letras</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin/AudioSpeakAlb.html">Tiempo de audio y Nº frases por persona</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/UMAP/UMAP_Albayzin216.html">UMAP</option>';
+                selectHtml += '<option value="">Selecciona un UMAP</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Thalento_Lectura/d_vector/UMAP_plots/UMAP_Lectura_Tipo.html">UMAP</option>';
                 selectHtml += '</select>';
                 return selectHtml;
             }else if (selectId==="Imageselector_Thal"){
                 var selectHtml = '<select id="' + selectId + '" onchange="loadContent(this.value)">';
-                selectHtml += '<option value="">Selecciona una imagen de Thalento Diálogo y Lectura</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Thalento/Avg_tim_Thalento.html">Tiempo medio por Nº letras</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Thalento/Median_time_Thalento.html">Tiempo mediano por Nº letras</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Thalento/STD_time_Thalento.html">Desviación típica del tiempo por Nº letras</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Thalento/AudioSpeakThal.html">Tiempo de audio y Nº frases por persona</option>';
-                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/UMAP/UMAP_Thalento_dial_lect_grande.html">UMAP</option>';
+                selectHtml += '<option value="">Selecciona un UMAP</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Thalento_Lectura/d_vector/UMAP_plots/UMAP_plots/UMAP_Lectura_TVD-D.html">Speaker D</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Thalento_Lectura/d_vector/UMAP_plots/UMAP_Lectura_TVD-N.html">Speaker N</option>';
+                selectHtml += '<option value="https://raw.githubusercontent.com/santirf01/Thalento_TTS/master/Thalento_Lectura/d_vector/UMAP_plots/UMAP_Lectura_TVD-P.html">Speaker P</option>';
                 selectHtml += '</select>';
                 return selectHtml;
             }else if (selectId==="Imageselector_Thal_Lect"){
