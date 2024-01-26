@@ -1,1 +1,241 @@
-Hola
+<html>
+<head>
+    <title>Imagenes TFG 809622</title>
+    <style>
+        .titulo-container {
+            background-image: url(https://santirf01.github.io/TFG_TTS_page.io/Imagenes/Fondo.jpeg);;
+            background-size: cover;
+            background-position: center;
+            /* Establecemos el tamaño del contenedor y la altura mínima para asegurar que la imagen de fondo cubra todo el título */
+            height: 180px;
+            /* Establecemos el color y estilo del texto del título */
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            /* Centramos el título verticalmente */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+      .logo1 {
+            position: absolute;
+            top: 115px; /* Distancia desde la parte superior */
+            right: 50px; /* Distancia desde la derecha */
+            width: 150px; /* Ancho del logotipo */
+            height: 60px; /* Altura del logotipo */
+        }
+      .logo2 {
+            position: absolute;
+            top: 100px; /* Distancia desde la parte superior */
+            left: 50px; /* Distancia desde la derecha */
+            width: 150px; /* Ancho del logotipo */
+            height: 80px; /* Altura del logotipo */
+        }
+        .contenedor-imagen {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .imagen {
+            border: 2px solid #333;
+            padding: 10px;
+            max-width: 200px; /* Establece el ancho máximo para las imágenes */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color:#f2f2f2;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+    <body>
+    <!-- Colocamos el título dentro del contenedor con la imagen de fondo -->
+    <div class="titulo-container">
+        <h1>Estudio de la síntesis de voz mediante técnicas de aprendizaje profundo para la creación de voces sanas y patológicas</h1>
+    </div>
+    <img src="https://santirf01.github.io/TFG_TTS_page.io/Imagenes/Vivolab.png" alt="Imagen de Vivolab" class="logo1">
+    <img src="https://santirf01.github.io/TFG_TTS_page.io/Imagenes/Unizar.png" alt="Imagen de Unizar" class="logo2">
+  <center>
+  <p><strong> Autor</strong>: Santiago Rubio Felipo.      <strong> Directores</strong> : Eduardo Lleida Solano,  Dayana Ribas González. </p>
+  <span class="entry-meta"><time itemprop="datePublished" datetime="2023-08-28"><em>Agosto 28, 2023</em></time></span>
+   </center>
+
+<p>En esta página se representan imágenes html, obtenidas en python con la librería bokeh, para el estudio de las bases de datos utilizada en el TFG: "Estudio de la síntesis de voz mediante técnicas de aprendizaje profundo para la creación de voces sanas y patológicas". Todas las imágenes tienen una etiqueta indicando el dato que se trata que aperecerá al seleccionarlo. </p>
+<table>
+    <tr>
+        <th colspan="2">Elige la Base de Datos que quieres ver</th>
+    </tr>
+    <tr>
+        <td>
+            <select id="categoriaSelector" onchange="showCategory(this.value)">
+                <option value="">Selecciona una categoría</option>
+                <option value="librivox">Librivox</option>
+                <option value="albayzin4">Albayzin 4 Speakers</option>
+                <option value="albayzin216">Albayzin 216 Speakers</option>
+                <option value="thalento_lect_dial">Thalento Lectura y Diálogo</option>
+                <option value="thalento_lect">Thalento Lectura</option>
+            </select>
+        </td>
+        <td id="selectContainer">
+            <!-- Aquí se cargará el segundo select -->
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div id="contenido"></div>
+        </td>
+    </tr>
+</table>
+    <script>
+        var selectContainer = document.getElementById("selectContainer");
+       var secondSelectCreated = false; // Variable para controlar si se ha creado el segundo select
+        // Función para cargar el contenido según la selección
+        function loadContent(url) {
+            var contenidoDiv = document.getElementById("contenido");
+            if (url) {
+                contenidoDiv.innerHTML = '<iframe src="' + url + '" width="840" height="640"></iframe>';
+            } else {
+                contenidoDiv.innerHTML = ""; // Limpiar el contenido si no se selecciona nada
+            }
+        }
+ function updateSecondSelect(optionsHtml) {
+        selectContainer.innerHTML = optionsHtml;
+    }        
+function showCategory(category) {
+    var contenidoDiv = document.getElementById("contenido");
+    
+    // Limpia el contenido del primer select cada vez que se elige una nueva categoría
+    contenidoDiv.innerHTML = "";
+
+    switch (category) {
+        case "librivox":
+            if (!secondSelectCreated) {
+                var selectHtml = createSelect("Imageselector_Lib");
+                 updateSecondSelect(selectHtml);
+                secondSelectCreated = true;
+            }else {
+                var selectHtml = createSelect("Imageselector_Lib"); 
+                updateSecondSelect(selectHtml);
+            }
+            document.getElementById("Imageselector_Lib").selectedIndex = 0;
+            break;
+        case "albayzin4":
+            if (!secondSelectCreated) {
+                var selectHtml = createSelect("Imageselector_Alb4");
+                 updateSecondSelect(selectHtml);
+                secondSelectCreated = true;
+            }else {
+               var selectHtml = createSelect("Imageselector_Alb4");
+                updateSecondSelect(selectHtml);
+            }
+            document.getElementById("Imageselector_Alb4").selectedIndex = 0;
+            break;
+        case "albayzin216":
+            if (!secondSelectCreated) {
+                var selectHtml = createSelect("Imageselector_Alb216");
+                 updateSecondSelect(selectHtml);
+                secondSelectCreated = true;
+            }else {
+            var selectHtml = createSelect("Imageselector_Alb216");
+                 updateSecondSelect(selectHtml);
+            }
+            document.getElementById("Imageselector_Alb216").selectedIndex = 0;
+            break;
+        case "thalento_lect_dial":
+            if (!secondSelectCreated) {
+                var selectHtml = createSelect("Imageselector_Thal");
+                 updateSecondSelect(selectHtml);
+                secondSelectCreated = true;
+            }else {
+                 var selectHtml = createSelect("Imageselector_Thal");
+                 updateSecondSelect(selectHtml);
+            }
+            document.getElementById("Imageselector_Thal").selectedIndex = 0;
+            break;
+        case "thalento_lect":
+            if (!secondSelectCreated) {
+                var selectHtml = createSelect("Imageselector_Thal_Lect");
+                 updateSecondSelect(selectHtml);
+                secondSelectCreated = true;
+            }else {
+                var selectHtml = createSelect("Imageselector_Thal_Lect");
+                 updateSecondSelect(selectHtml);
+            }
+            document.getElementById("Imageselector_Thal_Lect").selectedIndex = 0;
+            break;
+        default:
+            // Si no se selecciona ninguna categoría, limpiar el contenido del segundo select
+            selectContainer.innerHTML = "";
+            secondSelectCreated = false;
+            break;
+    }
+}
+
+        function createSelect(selectId) {
+            if (selectId==="Imageselector_Lib"){
+                var selectHtml = '<select id="' + selectId + '" onchange="loadContent(this.value)">';
+                selectHtml += '<option value="">Selecciona una imagen de Librivox</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Librivox/Avg_tim_Librivox.html">Tiempo medio por Nº letras</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Librivox/Median_time_Librivox.html">Tiempo mediano por Nº letras</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Librivox/STD_time_Librivox.html">Desviación típica del tiempo por Nº letras</option>';
+                selectHtml += '</select>';
+                return selectHtml;
+            }else if (selectId==="Imageselector_Alb4"){
+                var selectHtml = '<select id="' + selectId + '" onchange="loadContent(this.value)">';
+                selectHtml += '<option value="">Selecciona una imagen de Albayzin 4 speakers</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin_4_Speakers/Avg_tim_Albayzin_4_speakers.html">Tiempo medio por Nº letras</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin_4_Speakers/Median_time_Albayzin_4_speakers.html">Tiempo mediano por Nº letras</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin_4_Speakers/STD_time_Albayzin_4_speakers.html">Desviación típica del tiempo por Nº letras</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin_4_Speakers/AudioSpeakAlb_4speaker.html">Tiempo de audio y Nº frases por persona</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/UMAP/UMAP_Albayzin4.html">UMAP</option>';
+                selectHtml += '</select>';
+                return selectHtml;
+            }else if (selectId==="Imageselector_Alb216"){
+                var selectHtml = '<select id="' + selectId + '" onchange="loadContent(this.value)">';
+                selectHtml += '<option value="">Selecciona una imagen de Albayzin 216 speakers</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin/Avg_tim_Albayzin.html">Tiempo medio por Nº letras</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin/Median_time_Albayzin.html">Tiempo mediano por Nº letras</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin/STD_time_Albayzin.html">Desviación típica del tiempo por Nº letras</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Albayzin/AudioSpeakAlb.html">Tiempo de audio y Nº frases por persona</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/UMAP/UMAP_Albayzin216.html">UMAP</option>';
+                selectHtml += '</select>';
+                return selectHtml;
+            }else if (selectId==="Imageselector_Thal"){
+                var selectHtml = '<select id="' + selectId + '" onchange="loadContent(this.value)">';
+                selectHtml += '<option value="">Selecciona una imagen de Thalento Diálogo y Lectura</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Thalento/Avg_tim_Thalento.html">Tiempo medio por Nº letras</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Thalento/Median_time_Thalento.html">Tiempo mediano por Nº letras</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Thalento/STD_time_Thalento.html">Desviación típica del tiempo por Nº letras</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Thalento/AudioSpeakThal.html">Tiempo de audio y Nº frases por persona</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/UMAP/UMAP_Thalento_dial_lect_grande.html">UMAP</option>';
+                selectHtml += '</select>';
+                return selectHtml;
+            }else if (selectId==="Imageselector_Thal_Lect"){
+                var selectHtml = '<select id="' + selectId + '" onchange="loadContent(this.value)">';
+               selectHtml += '<option value="">Selecciona una imagen de Thalento Lectura</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Thalento_lect/Avg_tim_Thalento_lect.html">Tiempo medio por Nº letras</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Thalento_lect/Median_time_Thalento_lect.html">Tiempo mediano por Nº letras</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Thalento_lect/STD_time_Thalento_lect.html">Desviación típica del tiempo por Nº letras</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/Thalento_lect/AudioSpeakThal_lect.html">Tiempo de audio y Nº frases por persona</option>';
+                selectHtml += '<option value="https://santirf01.github.io/TFG_Image_page.io/Imagenes/UMAP/UMAP_Thalento_lect.html">UMAP</option>';
+                selectHtml += '</select>';
+                return selectHtml;
+            }
+        }
+    </script>
+</body>
+</html>
