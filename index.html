@@ -81,14 +81,15 @@
     </tr>
     <tr>
         <td>
-            <select id="categoriaSelector" onchange="showCategory(this.value)">
-                <option value="">Selecciona una categoría</option>
-                <option value="librivox">UMAP Diálogo y Lectura</option>
-                <option value="albayzin4">UMAP Lectura Orig vs Sint</option>
-                <option value="albayzin216">UMAP speakers Thalento</option>
-                <option value="thalento_lect_dial">UMAP tipos</option>
-                <option value="UMAP_Frag_20s">UMAP tipos Fragmentos 20s</option>
-            </select>
+        <select id="categoriaSelector" onchange="showCategory(this.value)">
+            <option value="">Selecciona una categoría</option>
+            <option value="librivox">UMAP Diálogo y Lectura</option>
+            <option value="albayzin4">UMAP Lectura Orig vs Sint</option>
+            <option value="albayzin216">UMAP speakers Thalento</option>
+            <option value="thalento_lect_dial">UMAP tipos</option>
+            <option value="UMAP_Frag_20s">UMAP tipos Fragmentos 20s</option>
+        </select>
+
         </td>
         <td id="selectContainer">
             <!-- Aquí se cargará el segundo select -->
@@ -243,6 +244,7 @@ function showCategory(category) {
                 selectHtml += '<option value="https://santirf01.github.io/UMAP_Thalento.github.io/Thalento_lectura/d_vector/UMAP_Clasificacion_Tipo_Speaker_Frag_20s/UMAP_Lectura_TVD-P.html">Speaker P</option>';
                 selectHtml += '</select>';
                 return selectHtml;
+        }
         }
     </script>
 </body>
