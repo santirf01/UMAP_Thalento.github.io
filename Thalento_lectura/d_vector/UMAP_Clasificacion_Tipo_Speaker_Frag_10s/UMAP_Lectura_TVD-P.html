@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.4.0.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="242416ca-6853-4442-a0ab-20a0a597c230" data-root-id="1150"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="1288">
+          {"67837645-8a57-465b-aada-3f508106c903":{"roots":{"references":[{"attributes":{"text":"UMAP Thalento Lectura"},"id":"1174","type":"Title"},{"attributes":{"callback":null,"tooltips":[["file","@desc"],["label","@label"],["edad","@edad"],["sexo","@sexo"]]},"id":"1146","type":"HoverTool"},{"attributes":{"callback":null},"id":"1149","type":"TapTool"},{"attributes":{},"id":"1157","type":"LinearScale"},{"attributes":{},"id":"1186","type":"Selection"},{"attributes":{"source":{"id":"1145","type":"ColumnDataSource"}},"id":"1179","type":"CDSView"},{"attributes":{},"id":"1155","type":"LinearScale"},{"attributes":{"callback":null},"id":"1153","type":"DataRange1d"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"1188","type":"BoxAnnotation"},{"attributes":{"fill_alpha":{"value":0.7},"fill_color":{"field":"color"},"line_alpha":{"value":0.7},"line_color":{"field":"color"},"size":{"units":"screen","value":8},"x":{"field":"x"},"y":{"field":"y"}},"id":"1176","type":"Circle"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"size":{"units":"screen","value":8},"x":{"field":"x"},"y":{"field":"y"}},"id":"1177","type":"Circle"},{"attributes":{"axis_label":"Dim 1 UMAP","formatter":{"id":"1183","type":"BasicTickFormatter"},"ticker":{"id":"1160","type":"BasicTicker"}},"id":"1159","type":"LinearAxis"},{"attributes":{},"id":"1165","type":"BasicTicker"},{"attributes":{},"id":"1183","type":"BasicTickFormatter"},{"attributes":{"callback":null},"id":"1151","type":"DataRange1d"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"1146","type":"HoverTool"},{"id":"1147","type":"BoxZoomTool"},{"id":"1148","type":"ResetTool"},{"id":"1149","type":"TapTool"}]},"id":"1169","type":"Toolbar"},{"attributes":{"overlay":{"id":"1188","type":"BoxAnnotation"}},"id":"1147","type":"BoxZoomTool"},{"attributes":{},"id":"1160","type":"BasicTicker"},{"attributes":{},"id":"1185","type":"BasicTickFormatter"},{"attributes":{"below":[{"id":"1159","type":"LinearAxis"}],"center":[{"id":"1163","type":"Grid"},{"id":"1168","type":"Grid"}],"left":[{"id":"1164","type":"LinearAxis"}],"plot_width":800,"renderers":[{"id":"1178","type":"GlyphRenderer"}],"title":{"id":"1174","type":"Title"},"toolbar":{"id":"1169","type":"Toolbar"},"x_range":{"id":"1151","type":"DataRange1d"},"x_scale":{"id":"1155","type":"LinearScale"},"y_range":{"id":"1153","type":"DataRange1d"},"y_scale":{"id":"1157","type":"LinearScale"}},"id":"1150","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"1187","type":"UnionRenderers"},{"attributes":{"dimension":1,"ticker":{"id":"1165","type":"BasicTicker"}},"id":"1168","type":"Grid"},{"attributes":{"ticker":{"id":"1160","type":"BasicTicker"}},"id":"1163","type":"Grid"},{"attributes":{"axis_label":"Dim 2 UMAP","formatter":{"id":"1185","type":"BasicTickFormatter"},"ticker":{"id":"1165","type":"BasicTicker"}},"id":"1164","type":"LinearAxis"},{"attributes":{},"id":"1148","type":"ResetTool"},{"attributes":{"data_source":{"id":"1145","type":"ColumnDataSource"},"glyph":{"id":"1176","type":"Circle"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1177","type":"Circle"},"selection_glyph":null,"view":{"id":"1179","type":"CDSView"}},"id":"1178","type":"GlyphRenderer"},{"attributes":{"callback":null,"data":{"color":["#8c564b","#8c564b","#dbdb8d","#dbdb8d","#dbdb8d","#ff9896","#ff9896","#ff9896","#e377c2","#e377c2","#e377c2","#bcbd22","#bcbd22","#c49c94","#c49c94","#c49c94","#c49c94","#aec7e8","#aec7e8","#aec7e8","#98df8a","#98df8a","#f7b6d2","#f7b6d2","#1f77b4","#1f77b4","#1f77b4","#d62728","#d62728","#d62728","#d62728","#ff7f0e","#ff7f0e","#c5b0d5","#c5b0d5","#c5b0d5","#c5b0d5","#c7c7c7","#c7c7c7","#c7c7c7","#ffbb78","#ffbb78","#ffbb78","#ffbb78","#2ca02c","#2ca02c","#2ca02c","#7f7f7f","#7f7f7f","#7f7f7f","#7f7f7f","#9467bd","#9467bd","#9467bd"],"desc":["TVD-P-0006/TVD-P-0006_D8_LECTURA_000.wav","TVD-P-0006/TVD-P-0006_D8_LECTURA_001.wav","TVD-P-0013/TVD-P-0013_D8_LECTURA_001.wav","TVD-P-0013/TVD-P-0013_D8_LECTURA_002.wav","TVD-P-0013/TVD-P-0013_D8_LECTURA_000.wav","TVD-P-0009/TVD-P-0009_D8_LECTURA_002.wav","TVD-P-0009/TVD-P-0009_D8_LECTURA_000.wav","TVD-P-0009/TVD-P-0009_D8_LECTURA_001.wav","TVD-P-0014/TVD-P-0014_D8_LECTURA_000.wav","TVD-P-0014/TVD-P-0014_D8_LECTURA_001.wav","TVD-P-0014/TVD-P-0014_D8_LECTURA_002.wav","TVD-P-0010/TVD-P-0010_D8_LECTURA_001.wav","TVD-P-0010/TVD-P-0010_D8_LECTURA_000.wav","TVD-P-0019/TVD-P-0019_D8_LECTURA_000.wav","TVD-P-0019/TVD-P-0019_D8_LECTURA_001.wav","TVD-P-0019/TVD-P-0019_D8_LECTURA_002.wav","TVD-P-0019/TVD-P-0019_D8_LECTURA_003.wav","TVD-P-0005/TVD-P-0005_D8_LECTURA_000.wav","TVD-P-0005/TVD-P-0005_D8_LECTURA_002.wav","TVD-P-0005/TVD-P-0005_D8_LECTURA_001.wav","TVD-P-0012/TVD-P-0012_D8_LECTURA_000.wav","TVD-P-0012/TVD-P-0012_D8_LECTURA_001.wav","TVD-P-0016/TVD-P-0016_D8_LECTURA_001.wav","TVD-P-0016/TVD-P-0016_D8_LECTURA_000.wav","TVD-P-0004/TVD-P-0004_D8_LECTURA_001.wav","TVD-P-0004/TVD-P-0004_D8_LECTURA_002.wav","TVD-P-0004/TVD-P-0004_D8_LECTURA_000.wav","TVD-P-0015/TVD-P-0015_D8_LECTURA_001.wav","TVD-P-0015/TVD-P-0015_D8_LECTURA_000.wav","TVD-P-0015/TVD-P-0015_D8_LECTURA_003.wav","TVD-P-0015/TVD-P-0015_D8_LECTURA_002.wav","TVD-P-0008/TVD-P-0008_D8_LECTURA_000.wav","TVD-P-0008/TVD-P-0008_D8_LECTURA_001.wav","TVD-P-0017/TVD-P-0017_D8_LECTURA_001.wav","TVD-P-0017/TVD-P-0017_D8_LECTURA_003.wav","TVD-P-0017/TVD-P-0017_D8_LECTURA_000.wav","TVD-P-0017/TVD-P-0017_D8_LECTURA_002.wav","TVD-P-0011/TVD-P-0011_D8_LECTURA_000.wav","TVD-P-0011/TVD-P-0011_D8_LECTURA_001.wav","TVD-P-0011/TVD-P-0011_D8_LECTURA_002.wav","TVD-P-0001/TVD-P-0001_D8_LECTURA_003.wav","TVD-P-0001/TVD-P-0001_D8_LECTURA_002.wav","TVD-P-0001/TVD-P-0001_D8_LECTURA_001.wav","TVD-P-0001/TVD-P-0001_D8_LECTURA_000.wav","TVD-P-0007/TVD-P-0007_D8_LECTURA_000.wav","TVD-P-0007/TVD-P-0007_D8_LECTURA_001.wav","TVD-P-0007/TVD-P-0007_D8_LECTURA_002.wav","TVD-P-0002/TVD-P-0002_D8_LECTURA_002.wav","TVD-P-0002/TVD-P-0002_D8_LECTURA_003.wav","TVD-P-0002/TVD-P-0002_D8_LECTURA_000.wav","TVD-P-0002/TVD-P-0002_D8_LECTURA_001.wav","TVD-P-0003/TVD-P-0003_D8_LECTURA_001.wav","TVD-P-0003/TVD-P-0003_D8_LECTURA_002.wav","TVD-P-0003/TVD-P-0003_D8_LECTURA_000.wav"],"edad":["34","34","56","56","56","54","54","54","37","37","37","25","25","45","45","45","45","46","46","46","29","29","60","60","47","47","47","55","55","55","55","32","32","51","51","51","51","44","44","44","62","62","62","62","32","32","32","41","41","41","41","44","44","44"],"label":["TVD-P-0006","TVD-P-0006","TVD-P-0013","TVD-P-0013","TVD-P-0013","TVD-P-0009","TVD-P-0009","TVD-P-0009","TVD-P-0014","TVD-P-0014","TVD-P-0014","TVD-P-0010","TVD-P-0010","TVD-P-0019","TVD-P-0019","TVD-P-0019","TVD-P-0019","TVD-P-0005","TVD-P-0005","TVD-P-0005","TVD-P-0012","TVD-P-0012","TVD-P-0016","TVD-P-0016","TVD-P-0004","TVD-P-0004","TVD-P-0004","TVD-P-0015","TVD-P-0015","TVD-P-0015","TVD-P-0015","TVD-P-0008","TVD-P-0008","TVD-P-0017","TVD-P-0017","TVD-P-0017","TVD-P-0017","TVD-P-0011","TVD-P-0011","TVD-P-0011","TVD-P-0001","TVD-P-0001","TVD-P-0001","TVD-P-0001","TVD-P-0007","TVD-P-0007","TVD-P-0007","TVD-P-0002","TVD-P-0002","TVD-P-0002","TVD-P-0002","TVD-P-0003","TVD-P-0003","TVD-P-0003"],"sexo":["Varon","Varon","Mujer","Mujer","Mujer","Varon","Varon","Varon","Mujer","Mujer","Mujer","Varon","Varon","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Varon","Varon","Varon","Varon","Mujer","Mujer","Mujer","Varon","Varon","Varon","Varon","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Mujer","Varon","Varon","Varon"],"x":[9.350475311279297,9.254443168640137,9.021552085876465,9.001710891723633,9.253172874450684,9.550308227539062,9.374861717224121,9.300650596618652,9.848965644836426,9.885104179382324,9.660473823547363,9.372838020324707,9.06370735168457,11.13657283782959,10.741141319274902,10.886564254760742,11.069053649902344,8.752508163452148,8.991467475891113,8.662866592407227,10.532371520996094,10.463754653930664,9.93842601776123,10.123435020446777,8.377729415893555,8.105294227600098,8.126241683959961,8.765981674194336,8.906562805175781,8.6303129196167,8.361175537109375,10.738052368164062,10.796062469482422,10.153641700744629,9.95732307434082,9.859339714050293,10.091083526611328,10.199996948242188,10.349150657653809,10.578741073608398,10.452733993530273,10.320775032043457,10.511741638183594,10.269327163696289,9.930133819580078,10.127917289733887,10.10136604309082,9.474767684936523,9.466204643249512,9.31761646270752,9.346811294555664,9.765557289123535,9.804165840148926,9.741523742675781],"y":[10.562012672424316,10.487661361694336,13.459094047546387,13.533565521240234,13.748856544494629,9.806462287902832,9.502106666564941,9.663376808166504,12.83837890625,13.196771621704102,12.995725631713867,10.17468547821045,10.080074310302734,13.472380638122559,13.025445938110352,13.210370063781738,13.152891159057617,12.190735816955566,12.486140251159668,12.335055351257324,13.701711654663086,13.425745010375977,11.969648361206055,12.165937423706055,12.607647895812988,12.824494361877441,12.61600399017334,13.040751457214355,12.889230728149414,13.357270240783691,13.258633613586426,12.535360336303711,12.439865112304688,10.43539047241211,10.35043716430664,10.414022445678711,10.190169334411621,12.467503547668457,12.596760749816895,12.018041610717773,9.73669719696045,9.71937370300293,9.58126163482666,9.538186073303223,13.739827156066895,13.459689140319824,13.87759017944336,11.831953048706055,12.055061340332031,11.624656677246094,12.135684967041016,9.370997428894043,9.06247329711914,9.142730712890625]},"selected":{"id":"1186","type":"Selection"},"selection_policy":{"id":"1187","type":"UnionRenderers"}},"id":"1145","type":"ColumnDataSource"}],"root_ids":["1150"]},"title":"Bokeh Application","version":"1.4.0"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('1288').textContent;
+                  var render_items = [{"docid":"67837645-8a57-465b-aada-3f508106c903","roots":{"1150":"242416ca-6853-4442-a0ab-20a0a597c230"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
