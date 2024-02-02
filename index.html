@@ -263,16 +263,16 @@ function showCategory(category) {
             }
             document.getElementById("Imageselector_UMAP_40s").selectedIndex = 0;
             break;
-        case "UMAP_Frag_enteros":
+        case "UMAP_Frag_Enteros":
             if (!secondSelectCreated) {
-                var selectHtml = createSelect("Imageselector_UMAP_enteros");
+                var selectHtml = createSelect("Imageselector_UMAP_Enteros");
                  updateSecondSelect(selectHtml);
                 secondSelectCreated = true;
             }else {
-                var selectHtml = createSelect("Imageselector_UMAP_enteros");
+                var selectHtml = createSelect("Imageselector_UMAP_Enteros");
                  updateSecondSelect(selectHtml);
             }
-            document.getElementById("Imageselector_UMAP_enteros").selectedIndex = 0;
+            document.getElementById("Imageselector_UMAP_Enteros").selectedIndex = 0;
             break;
         default:
             // Si no se selecciona ninguna categoría, limpiar el contenido del segundo select
@@ -403,7 +403,7 @@ function showCategory(category) {
                 selectHtml += '<option value="https://santirf01.github.io/UMAP_Thalento.github.io/Thalento_lectura/d_vector/UMAP_Clasificacion_Tipo_Speaker_Frag_40s/UMAP_Lectura_TVD-P.html">Speaker P</option>';
                 selectHtml += '</select>';
                 return selectHtml;
-            }else if (selectId==="Imageselector_UMAP_enteros"){
+            }else if (selectId==="Imageselector_UMAP_Enteros"){
                 var selectHtml = '<select id="' + selectId + '" onchange="loadContent(this.value)">';
                 selectHtml += '<option value="">Selecciona un UMAP</option>';
                 selectHtml += '<option value="https://santirf01.github.io/UMAP_Thalento.github.io/Thalento_lectura/d_vector/UMAP_Clasificacion_Tipo_Speaker_Frag_Enteros/UMAP_Lectura_Tipo.html">Clasificación</option>';
